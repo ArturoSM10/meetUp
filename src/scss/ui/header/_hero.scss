@@ -1,0 +1,43 @@
+@use '../../base/variables' as v;
+@use '../../base/mixins' as m;
+
+.avif .hero {
+    background-image: url('../img/hero.avif');
+}
+
+.webp.noavif .hero {
+    background-image: url('../img/hero.webp');
+}
+
+.noavif.nowebp .hero {
+    background-image: url('../img/hero.jpg');
+}
+
+.hero {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60rem;
+
+
+    &__info {
+        max-width: 60rem;
+    }
+
+    &__titulo {
+        color: v.$blanco;
+        text-align: center;
+        margin: 0;
+        line-height: 1.2;
+    }
+
+    &__btn {
+        @include m.boton(v.$naranja, v.$blanco, unset);
+        width: fit-content;
+        margin: 2rem auto 0;
+        line-height: 1.15;
+    }
+}

@@ -27,7 +27,7 @@
 
 @mixin boton ($color, $texto, $decoration) {
     background-color: $color;
-    font-size: 2.2rem;
+    font-size: 2rem;
     display: block;
     width: 100%;
     text-align: center;
@@ -35,14 +35,14 @@
     text-decoration: none;
     border: none;
     margin-top: 2rem;
-    padding: 2rem 4rem;
+    padding: 1.5rem 4rem;
     text-transform: $decoration;
     font-weight: 700;
     transition: 0.3s background-color;
 
     &:hover {
         cursor: pointer;
-        background-color: color.mix(#d6598c, $color, 100%);
+        background-color: color.mix(#000, v.$naranja, 10%);
     }
 }
 

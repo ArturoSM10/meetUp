@@ -55,6 +55,8 @@
 
     &__derechos {
         text-align: center;
-        padding-top: 1rem;
+        @include m.tablet {
+            padding-top: 1rem;
+        }
     }
 }
